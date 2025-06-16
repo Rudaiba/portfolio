@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { footer } from "@/data/global";
-import Image from "next/image";
-import myImageLoader from "@/utils/image-loader";
 
 function Footer() {
   return (
@@ -26,12 +24,7 @@ function Footer() {
                         >
                           {item.icon && (
                             <span className="pr-2 -mb-1">
-                              <Image
-                                loader={myImageLoader}
-                                src={item.icon}
-                                width={20}
-                                height={20}
-                              />
+                              <img src={item.icon} width="20" height="20" />
                             </span>
                           )}
                           {item.name}
@@ -134,11 +127,10 @@ function Footer() {
           target="_blank"
           rel="nooreferrer"
         >
-          <Image
-            loader={myImageLoader}
+          <img
             src="/static/icons/github.svg"
-            width={16}
-            height={16}
+            width="16"
+            height="16"
             alt="Github Icon"
           />
           <span className="ml-2">View Source Code </span>

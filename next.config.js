@@ -6,8 +6,7 @@ module.exports = {
     assetPrefix: repo ? `/${repo}/` : '',
     swcMinify: true,
     images: {
-        loader: 'custom',
-        loaderFile: './utils/image-loader.js',
+        unoptimized: true,
     },
     async redirects() {
         return [
