@@ -5,6 +5,10 @@ module.exports = {
     basePath: repo ? `/${repo}` : '',
     assetPrefix: repo ? `/${repo}/` : '',
     swcMinify: true,
+    images: {
+        loader: 'custom',
+        loaderFile: './utils/image-loader.js',
+    },
     async redirects() {
         return [
           {

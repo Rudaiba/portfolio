@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
+import myImageLoader from "@/utils/image-loader";
 
 function ProjectCard({ project }) {
   return (
@@ -28,6 +29,7 @@ function ProjectCard({ project }) {
             {project.link && (
               <a href={project.link} target="_blank" rel="noreferrer">
                 <Image
+                  loader={myImageLoader}
                   src="/static/icons/external-link.svg"
                   width={16}
                   height={16}
@@ -38,6 +40,7 @@ function ProjectCard({ project }) {
             {project.github && (
               <a href={project.github} target="_blank" rel="noreferrer">
                 <Image
+                  loader={myImageLoader}
                   src="/static/icons/github.svg"
                   width={16}
                   height={16}
